@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.open-modal-btn {
+  color: #721972;
+  background: #d9a3e4;
+  font-weight: 500;
+  border: 2px solid #633a99;
+  border-radius: 20px;
+  outline: none;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 23px;
+  padding: 15px 15px;
+  box-shadow: 2px 2px #682aaf;
+  transition: all 0.1s ease-in-out;
+
+
+&:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+&:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+}
+
+button.close {
+ line-height: 25px;
+ font-weight: 500;
+ display: flex;
+ font-size: 15px;
+ margin-top: 30px;
+ margin-left: 80px;
+ cursor: pointer;
+ background: salmon;
+ color: #000000;
+ border: 2px solid #d13226;
+ border-radius: 20px;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+
+.overlay.animated {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: #fff;
+  width: 70%;
+  max-width: 200px;
+  max-height: 200;
+  padding: 40px 30px;
+  position: absolute;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay.animated.show {
+  opacity: 1;
+  visibility: visible;
+}
